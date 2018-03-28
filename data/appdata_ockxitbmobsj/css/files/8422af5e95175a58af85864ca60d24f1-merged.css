@@ -1,0 +1,1339 @@
+/* Copyright (c) 2011, Jan-Christoph Borchardt, http://jancborchardt.net
+ This file is licensed under the Affero General Public License version 3 or later.
+ See the COPYING-README file. */
+/* SETTINGS */
+/* line 6, /var/www/html/nextcloud/apps/files/css/files.scss */
+#files-setting-showhidden {
+  padding-bottom: 8px;
+}
+/* FILE MENU */
+/* line 11, /var/www/html/nextcloud/apps/files/css/files.scss */
+.actions {
+  padding: 5px;
+  height: 32px;
+  display: inline-block;
+  float: left;
+}
+/* line 12, /var/www/html/nextcloud/apps/files/css/files.scss */
+.actions input, .actions button, .actions .button {
+  margin: 0;
+  float: left;
+}
+/* line 13, /var/www/html/nextcloud/apps/files/css/files.scss */
+.actions .button a {
+  color: #555;
+}
+/* line 14, /var/www/html/nextcloud/apps/files/css/files.scss */
+.actions .button a:hover, .actions .button a:focus, .actions .button a:active {
+  color: #333;
+}
+/* line 19, /var/www/html/nextcloud/apps/files/css/files.scss */
+.actions.hidden {
+  display: none;
+}
+/* line 21, /var/www/html/nextcloud/apps/files/css/files.scss */
+.actions.creatable {
+  position: relative;
+  z-index: -30;
+}
+/* line 26, /var/www/html/nextcloud/apps/files/css/files.scss */
+#trash {
+  margin-right: 8px;
+  float: right;
+  z-index: 1010;
+  padding: 10px;
+  font-weight: normal;
+}
+/* line 34, /var/www/html/nextcloud/apps/files/css/files.scss */
+.newFileMenu .error, #fileList .error {
+  color: #e9322d;
+  border-color: #e9322d;
+  -webkit-box-shadow: 0 0 6px #f8b9b7;
+  -moz-box-shadow: 0 0 6px #f8b9b7;
+  box-shadow: 0 0 6px #f8b9b7;
+}
+/* FILE TABLE */
+/* line 43, /var/www/html/nextcloud/apps/files/css/files.scss */
+#filestable {
+  position: relative;
+  width: 100%;
+}
+/* line 48, /var/www/html/nextcloud/apps/files/css/files.scss */
+#filestable.has-controls {
+  top: 44px;
+}
+/* make sure there's enough room for the file actions */
+/* line 53, /var/www/html/nextcloud/apps/files/css/files.scss */
+#body-user #filestable {
+  min-width: 688px;
+  /* 768 (mobile break) - 80 (nav width) */
+}
+/* line 56, /var/www/html/nextcloud/apps/files/css/files.scss */
+#body-user #controls {
+  min-width: 688px;
+  /* 768 (mobile break) - 80 (nav width) */
+}
+/* line 60, /var/www/html/nextcloud/apps/files/css/files.scss */
+#filestable tbody tr {
+  background-color: #fff;
+  height: 51px;
+}
+/* fit app list view heights */
+/* line 66, /var/www/html/nextcloud/apps/files/css/files.scss */
+.app-files #app-content > .viewcontainer {
+  min-height: 0%;
+}
+/* line 70, /var/www/html/nextcloud/apps/files/css/files.scss */
+.app-files #app-content {
+  transition: background-color 0.3s ease;
+  overflow-x: hidden;
+}
+/* line 75, /var/www/html/nextcloud/apps/files/css/files.scss */
+.file-drag, .file-drag #filestable tbody tr, .file-drag #filestable tbody tr:hover {
+  transition: background-color 0.3s ease !important;
+  background-color: #b3e6ff !important;
+}
+/* line 80, /var/www/html/nextcloud/apps/files/css/files.scss */
+.app-files #app-content.dir-drop, .file-drag #filestable tbody tr, .file-drag #filestable tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+/* line 84, /var/www/html/nextcloud/apps/files/css/files.scss */
+.app-files #app-content.dir-drop #filestable tbody tr.dropping-to-dir {
+  background-color: #b3e6ff !important;
+}
+/* icons for sidebar */
+/* line 89, /var/www/html/nextcloud/apps/files/css/files.scss */
+.nav-icon-files {
+  background-image: url('/nextcloud/apps/files/css/../img/folder.svg?v=1');
+}
+/* line 92, /var/www/html/nextcloud/apps/files/css/files.scss */
+.nav-icon-recent {
+  background-image: url('/nextcloud/apps/files/css/../img/recent.svg?v=1');
+}
+/* line 95, /var/www/html/nextcloud/apps/files/css/files.scss */
+.nav-icon-favorites {
+  background-image: url('/nextcloud/apps/files/css/../img/star.svg?v=1');
+}
+/* line 98, /var/www/html/nextcloud/apps/files/css/files.scss */
+.nav-icon-sharingin, .nav-icon-sharingdepart, .nav-icon-sharingout {
+  background-image: url('/nextcloud/apps/files/css/../img/share.svg?v=1');
+}
+/* line 103, /var/www/html/nextcloud/apps/files/css/files.scss */
+.nav-icon-sharinglinks {
+  background-image: url('/nextcloud/apps/files/css/../img/public.svg?v=1');
+}
+/* line 106, /var/www/html/nextcloud/apps/files/css/files.scss */
+.nav-icon-extstoragemounts {
+  background-image: url('/nextcloud/apps/files/css/../img/external.svg?v=1');
+}
+/* line 109, /var/www/html/nextcloud/apps/files/css/files.scss */
+.nav-icon-trashbin {
+  background-image: url('/nextcloud/apps/files/css/../img/delete.svg?v=1');
+}
+/* no icon for the quota bar */
+/* line 113, /var/www/html/nextcloud/apps/files/css/files.scss */
+.nav-icon-quota {
+  padding-left: 15px !important;
+}
+/* line 117, /var/www/html/nextcloud/apps/files/css/files.scss */
+#app-navigation .nav-files a.nav-icon-files {
+  width: auto;
+}
+/* button needs overrides due to navigation styles */
+/* line 121, /var/www/html/nextcloud/apps/files/css/files.scss */
+#app-navigation .nav-files a.new {
+  width: 40px;
+  height: 32px;
+  padding: 0 10px;
+  margin: 0;
+  cursor: pointer;
+}
+/* line 129, /var/www/html/nextcloud/apps/files/css/files.scss */
+#app-navigation .nav-files a.new.hidden {
+  display: none;
+}
+/* line 133, /var/www/html/nextcloud/apps/files/css/files.scss */
+#app-navigation .nav-files a.new.disabled {
+  opacity: 0.3;
+}
+/* line 137, /var/www/html/nextcloud/apps/files/css/files.scss */
+#filestable tbody tr {
+  transition: background-color 0.3s ease;
+  background-color: #fff;
+  height: 40px;
+}
+/* line 142, /var/www/html/nextcloud/apps/files/css/files.scss */
+#filestable tbody tr:hover, #filestable tbody tr:focus, #filestable tbody .name:focus, #filestable tbody tr:active, #filestable tbody tr.highlighted, #filestable tbody tr.highlighted .name:focus, #filestable tbody tr.selected, #filestable tbody tr.searchresult, table tr.mouseOver td {
+  transition: background-color 0.3s ease;
+  background-color: #f8f8f8;
+}
+/* line 154, /var/www/html/nextcloud/apps/files/css/files.scss */
+tbody a {
+  color: #000;
+}
+/* line 156, /var/www/html/nextcloud/apps/files/css/files.scss */
+span.conflict-path, span.extension, span.uploading, td.date {
+  color: #999;
+}
+/* line 159, /var/www/html/nextcloud/apps/files/css/files.scss */
+span.conflict-path, span.extension {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
+  opacity: 0.7;
+  -webkit-transition: opacity 300ms;
+  -moz-transition: opacity 300ms;
+  -o-transition: opacity 300ms;
+  transition: opacity 300ms;
+  vertical-align: top;
+}
+/* line 169, /var/www/html/nextcloud/apps/files/css/files.scss */
+tr:hover span.conflict-path, tr:focus span.conflict-path, tr:hover span.extension, tr:focus span.extension {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+  color: #777;
+}
+/* line 179, /var/www/html/nextcloud/apps/files/css/files.scss */
+table th, table th a {
+  color: #999;
+}
+/* line 182, /var/www/html/nextcloud/apps/files/css/files.scss */
+table.multiselect th a {
+  color: #000;
+}
+/* line 185, /var/www/html/nextcloud/apps/files/css/files.scss */
+table th .columntitle {
+  display: block;
+  padding: 15px;
+  height: 50px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  vertical-align: middle;
+}
+/* line 193, /var/www/html/nextcloud/apps/files/css/files.scss */
+table th .columntitle.name {
+  padding-left: 5px;
+  padding-right: 80px;
+  margin-left: 50px;
+}
+/* line 199, /var/www/html/nextcloud/apps/files/css/files.scss */
+table th .sort-indicator {
+  width: 10px;
+  height: 8px;
+  margin-left: 5px;
+  display: inline-block;
+  vertical-align: text-bottom;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+}
+/* line 209, /var/www/html/nextcloud/apps/files/css/files.scss */
+.sort-indicator.hidden, .multiselect .sort-indicator, table.multiselect th:hover .sort-indicator.hidden, table.multiselect th:focus .sort-indicator.hidden {
+  visibility: hidden;
+}
+/* line 215, /var/www/html/nextcloud/apps/files/css/files.scss */
+.multiselect .sort, .multiselect .sort span {
+  cursor: default;
+}
+/* line 218, /var/www/html/nextcloud/apps/files/css/files.scss */
+table th:hover .sort-indicator.hidden, table th:focus .sort-indicator.hidden {
+  visibility: visible;
+}
+/* line 223, /var/www/html/nextcloud/apps/files/css/files.scss */
+table th, table td {
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-weight: normal;
+}
+/* line 229, /var/www/html/nextcloud/apps/files/css/files.scss */
+table td {
+  padding: 0 15px;
+  font-style: normal;
+  background-position: 8px center;
+  background-repeat: no-repeat;
+}
+/* line 235, /var/www/html/nextcloud/apps/files/css/files.scss */
+table th#headerName {
+  position: relative;
+  width: 9999px;
+  /* not really sure why this works better than 100% … table styling */
+  padding: 0;
+}
+/* line 241, /var/www/html/nextcloud/apps/files/css/files.scss */
+#headerName-container {
+  position: relative;
+  height: 50px;
+}
+/* line 245, /var/www/html/nextcloud/apps/files/css/files.scss */
+.has-favorites #headerName-container {
+  padding-left: 50px;
+}
+/* line 249, /var/www/html/nextcloud/apps/files/css/files.scss */
+table th#headerSize, table td.filesize {
+  text-align: right;
+}
+/* line 252, /var/www/html/nextcloud/apps/files/css/files.scss */
+table th#headerDate, table td.date, table th.column-last, table td.column-last {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  /* this can not be just width, both need to be set … table styling */
+  min-width: 130px;
+  max-width: 130px;
+}
+/* Multiselect bar */
+/* line 263, /var/www/html/nextcloud/apps/files/css/files.scss */
+#filestable.multiselect {
+  top: 95px;
+}
+/* line 266, /var/www/html/nextcloud/apps/files/css/files.scss */
+table.multiselect thead {
+  position: fixed;
+  top: 89px;
+  z-index: 10;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  left: 250px;
+  /* sidebar */
+}
+/* line 275, /var/www/html/nextcloud/apps/files/css/files.scss */
+table thead th {
+  background-color: #fff;
+}
+/* line 278, /var/www/html/nextcloud/apps/files/css/files.scss */
+table.multiselect thead th {
+  background-color: rgba(255, 255, 255, 0.95);
+  /* like controls bar */
+  color: #000;
+  font-weight: bold;
+  border-bottom: 0;
+}
+/* line 285, /var/www/html/nextcloud/apps/files/css/files.scss */
+#app-content.with-app-sidebar table.multiselect thead {
+  margin-right: 27%;
+}
+/* line 289, /var/www/html/nextcloud/apps/files/css/files.scss */
+table.multiselect #headerName {
+  position: relative;
+  width: 9999px;
+  /* when we use 100%, the styling breaks on mobile … table styling */
+}
+/* line 293, /var/www/html/nextcloud/apps/files/css/files.scss */
+table.multiselect #modified {
+  display: none;
+}
+/* line 297, /var/www/html/nextcloud/apps/files/css/files.scss */
+table td.selection, table th.selection, table td.fileaction {
+  width: 32px;
+  text-align: center;
+}
+/* line 303, /var/www/html/nextcloud/apps/files/css/files.scss */
+table td.filename a.name {
+  position: relative;
+  -moz-box-sizing: border-box;
+  /* Firefox needs to explicitly have this default set … */
+  box-sizing: border-box;
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+}
+/* line 312, /var/www/html/nextcloud/apps/files/css/files.scss */
+table td.filename .thumbnail {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-left: 8px;
+  margin-top: 9px;
+  cursor: pointer;
+  float: left;
+  position: absolute;
+  z-index: 4;
+}
+/* line 323, /var/www/html/nextcloud/apps/files/css/files.scss */
+table td.filename input.filename {
+  width: 70%;
+  margin-top: 9px;
+  margin-left: 48px;
+  cursor: text;
+}
+/* line 329, /var/www/html/nextcloud/apps/files/css/files.scss */
+.has-favorites table td.filename input.filename {
+  margin-left: 52px;
+}
+/* line 333, /var/www/html/nextcloud/apps/files/css/files.scss */
+table td.filename a, table td.login, table td.logout, table td.download, table td.upload, table td.create, table td.delete {
+  padding: 3px 8px 8px 3px;
+}
+/* line 334, /var/www/html/nextcloud/apps/files/css/files.scss */
+table td.filename .nametext, .uploadtext, .modified, .column-last > span:first-child {
+  float: left;
+  padding: 15px 0;
+}
+/* line 336, /var/www/html/nextcloud/apps/files/css/files.scss */
+.modified, .column-last > span:first-child {
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 110px;
+}
+/* TODO fix usability bug (accidental file/folder selection) */
+/* line 344, /var/www/html/nextcloud/apps/files/css/files.scss */
+table td.filename .nametext {
+  position: absolute;
+  left: 55px;
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 70%;
+  max-width: 800px;
+  height: 100%;
+}
+/* ellipsis on file names */
+/* line 355, /var/www/html/nextcloud/apps/files/css/files.scss */
+table td.filename .nametext .innernametext {
+  max-width: calc(100% - 100px) !important;
+}
+/* line 358, /var/www/html/nextcloud/apps/files/css/files.scss */
+.has-favorites #fileList td.filename a.name {
+  left: 50px;
+  margin-right: 50px;
+}
+/* line 363, /var/www/html/nextcloud/apps/files/css/files.scss */
+.hide-hidden-files #fileList tr.hidden-file, .hide-hidden-files #fileList tr.hidden-file.dragging {
+  display: none;
+}
+/* line 368, /var/www/html/nextcloud/apps/files/css/files.scss */
+#fileList tr.animate-opacity {
+  -webkit-transition: opacity 250ms;
+  -moz-transition: opacity 250ms;
+  -o-transition: opacity 250ms;
+  transition: opacity 250ms;
+}
+/* line 374, /var/www/html/nextcloud/apps/files/css/files.scss */
+#fileList tr.dragging {
+  opacity: 0.2;
+}
+/* line 378, /var/www/html/nextcloud/apps/files/css/files.scss */
+table td.filename .nametext .innernametext {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+@media only screen and (min-width: 1500px) {
+  /* line 387, /var/www/html/nextcloud/apps/files/css/files.scss */
+  table td.filename .nametext .innernametext {
+    max-width: 790px;
+  }
+  /* line 390, /var/www/html/nextcloud/apps/files/css/files.scss */
+  .with-app-sidebar table td.filename .nametext .innernametext {
+    max-width: 390px;
+  }
+}
+@media only screen and (min-width: 1366px) and (max-width: 1500px) {
+  /* line 395, /var/www/html/nextcloud/apps/files/css/files.scss */
+  table td.filename .nametext .innernametext {
+    max-width: 660px;
+  }
+  /* line 398, /var/www/html/nextcloud/apps/files/css/files.scss */
+  .with-app-sidebar table td.filename .nametext .innernametext {
+    max-width: 290px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1366px) {
+  /* line 403, /var/www/html/nextcloud/apps/files/css/files.scss */
+  table td.filename .nametext .innernametext {
+    max-width: 500px;
+  }
+  /* line 406, /var/www/html/nextcloud/apps/files/css/files.scss */
+  .with-app-sidebar table td.filename .nametext .innernametext {
+    max-width: 230px;
+  }
+}
+@media only screen and (min-width: 1100px) and (max-width: 1200px) {
+  /* line 411, /var/www/html/nextcloud/apps/files/css/files.scss */
+  table td.filename .nametext .innernametext {
+    max-width: 400px;
+  }
+  /* line 414, /var/www/html/nextcloud/apps/files/css/files.scss */
+  .with-app-sidebar table td.filename .nametext .innernametext {
+    max-width: 230px;
+  }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1100px) {
+  /* line 419, /var/www/html/nextcloud/apps/files/css/files.scss */
+  table td.filename .nametext .innernametext {
+    max-width: 310px;
+  }
+  /* line 422, /var/www/html/nextcloud/apps/files/css/files.scss */
+  .with-app-sidebar table td.filename .nametext .innernametext {
+    max-width: 230px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+  /* line 427, /var/www/html/nextcloud/apps/files/css/files.scss */
+  table td.filename .nametext .innernametext {
+    max-width: 240px;
+  }
+  /* line 430, /var/www/html/nextcloud/apps/files/css/files.scss */
+  .with-app-sidebar table td.filename .nametext .innernametext {
+    max-width: 230px;
+  }
+}
+/* for smaller resolutions - see mobile.css */
+/* line 437, /var/www/html/nextcloud/apps/files/css/files.scss */
+table td.filename .uploadtext {
+  font-weight: normal;
+  margin-left: 55px;
+  margin-top: 5px;
+  height: 20px;
+  padding: 10px 0;
+  font-size: 11px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+/* File checkboxes */
+/* line 450, /var/www/html/nextcloud/apps/files/css/files.scss */
+#fileList tr td.filename > .selectCheckBox + label:before {
+  opacity: 0;
+  position: absolute;
+  bottom: 4px;
+  right: 0;
+  z-index: 10;
+}
+/* Show checkbox when hovering, checked, or selected */
+/* line 459, /var/www/html/nextcloud/apps/files/css/files.scss */
+#fileList tr:hover td.filename > .selectCheckBox + label:before, #fileList tr:focus td.filename > .selectCheckBox + label:before, #fileList tr td.filename > .selectCheckBox:checked + label:before, #fileList tr.selected td.filename > .selectCheckBox + label:before {
+  opacity: 1;
+}
+/* Use label to have bigger clickable size for checkbox */
+/* line 467, /var/www/html/nextcloud/apps/files/css/files.scss */
+#fileList tr td.filename > .selectCheckBox + label, .select-all + label {
+  background-position: 30px 30px;
+  height: 50px;
+  position: absolute;
+  width: 50px;
+  z-index: 5;
+}
+/* line 475, /var/www/html/nextcloud/apps/files/css/files.scss */
+#fileList tr td.filename > .selectCheckBox {
+  /* sometimes checkbox height is bigger (KDE/Qt), so setting to absolute
+   * to prevent it to increase the height */
+  position: absolute;
+  z-index: 10;
+}
+/* line 481, /var/www/html/nextcloud/apps/files/css/files.scss */
+.select-all + label {
+  top: 0;
+}
+/* line 484, /var/www/html/nextcloud/apps/files/css/files.scss */
+.select-all + label:before {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 10;
+}
+/* line 490, /var/www/html/nextcloud/apps/files/css/files.scss */
+.has-favorites .select-all {
+  left: 68px;
+}
+/* line 494, /var/www/html/nextcloud/apps/files/css/files.scss */
+#fileList tr td.filename {
+  position: relative;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  -webkit-transition: background-image 500ms;
+  -moz-transition: background-image 500ms;
+  -o-transition: background-image 500ms;
+  transition: background-image 500ms;
+}
+/* line 502, /var/www/html/nextcloud/apps/files/css/files.scss */
+#fileList tr td.filename a.name label {
+  position: absolute;
+  width: 80%;
+  height: 50px;
+}
+/* line 508, /var/www/html/nextcloud/apps/files/css/files.scss */
+#fileList tr td.filename .favorite {
+  display: inline-block;
+  float: left;
+}
+/* line 512, /var/www/html/nextcloud/apps/files/css/files.scss */
+#fileList tr td.filename .action-favorite {
+  display: block;
+  float: left;
+  width: 30px;
+  line-height: 100%;
+  text-align: center;
+}
+/* line 520, /var/www/html/nextcloud/apps/files/css/files.scss */
+#uploadsize-message, #delete-confirm {
+  display: none;
+}
+/* File actions */
+/* line 523, /var/www/html/nextcloud/apps/files/css/files.scss */
+.fileactions {
+  position: absolute;
+  right: 0;
+}
+/* line 528, /var/www/html/nextcloud/apps/files/css/files.scss */
+.busy .fileactions, .busy .action {
+  visibility: hidden;
+}
+/* fix position of bubble pointer for Files app */
+/* line 533, /var/www/html/nextcloud/apps/files/css/files.scss */
+.bubble, #app-navigation .app-navigation-entry-menu {
+  border-top-right-radius: 3px;
+  min-width: 100px;
+}
+/* force show the loading icon, not only on hover */
+/* line 540, /var/www/html/nextcloud/apps/files/css/files.scss */
+#fileList .icon-loading-small {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1 !important;
+  display: inline !important;
+}
+/* line 547, /var/www/html/nextcloud/apps/files/css/files.scss */
+#fileList .action.action-share-notification span, #fileList a.name {
+  cursor: default !important;
+}
+/* line 551, /var/www/html/nextcloud/apps/files/css/files.scss */
+a.action > img {
+  height: 16px;
+  width: 16px;
+  vertical-align: text-bottom;
+}
+/* Actions for selected files */
+/* line 558, /var/www/html/nextcloud/apps/files/css/files.scss */
+.selectedActions {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* line 563, /var/www/html/nextcloud/apps/files/css/files.scss */
+.selectedActions a {
+  display: inline;
+  font-size: 11px;
+  line-height: 50px;
+  padding: 18px 5px;
+}
+/* line 569, /var/www/html/nextcloud/apps/files/css/files.scss */
+.selectedActions a.delete-selected {
+  padding-right: 15px;
+}
+/* line 572, /var/www/html/nextcloud/apps/files/css/files.scss */
+.selectedActions a.hidden {
+  display: none;
+}
+/* line 575, /var/www/html/nextcloud/apps/files/css/files.scss */
+.selectedActions a img {
+  position: relative;
+  vertical-align: text-bottom;
+  margin-bottom: -1px;
+}
+/* line 581, /var/www/html/nextcloud/apps/files/css/files.scss */
+#fileList a.action {
+  display: inline;
+  padding: 17px 8px;
+  line-height: 50px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+/* line 589, /var/www/html/nextcloud/apps/files/css/files.scss */
+#fileList a.action.action-share {
+  padding: 17px 14px;
+}
+/* line 593, /var/www/html/nextcloud/apps/files/css/files.scss */
+#fileList a.action.action-menu {
+  padding-top: 17px;
+  padding-bottom: 17px;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+/* line 600, /var/www/html/nextcloud/apps/files/css/files.scss */
+#fileList a.action, #fileList a.action.no-permission:hover, #fileList a.action.no-permission:focus, #fileList a.action.disabled:hover, #fileList a.action.disabled:focus, #fileList a.action.disabled img {
+  /* also enforce the low opacity for disabled links that are hovered/focused */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+}
+/* line 612, /var/www/html/nextcloud/apps/files/css/files.scss */
+#fileList a.action.disabled.action-download, #fileList a.action.disabled.action-download:hover, #fileList a.action.disabled.action-download:focus, #fileList a.action:hover, #fileList a.action:focus, #fileList .fileActionsMenu a.action, #fileList a.action.action-share.shared-style {
+  /* show share action of shared items darker to distinguish from non-shared */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
+  opacity: 0.7;
+}
+/* line 626, /var/www/html/nextcloud/apps/files/css/files.scss */
+#fileList .action.action-share.permanent.shared-style span:not(.icon) {
+  display: inline-block;
+  max-width: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: bottom;
+  padding-left: 6px;
+}
+/* line 635, /var/www/html/nextcloud/apps/files/css/files.scss */
+#fileList .fileActionsMenu a.action:hover, #fileList .fileActionsMenu a.action:focus, #fileList a.action.action-share.shared-style:hover, #fileList a.action.action-share.shared-style:focus {
+  /* show share action of shared items darker to distinguish from non-shared */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+/* line 645, /var/www/html/nextcloud/apps/files/css/files.scss */
+#fileList tr a.action.disabled {
+  background: none;
+}
+/* line 649, /var/www/html/nextcloud/apps/files/css/files.scss */
+#selectedActionsList a.download.disabled, #fileList tr a.action.action-download.disabled {
+  color: #000;
+}
+/* line 654, /var/www/html/nextcloud/apps/files/css/files.scss */
+#fileList tr:hover a.action.disabled:hover * {
+  cursor: default;
+}
+/* line 658, /var/www/html/nextcloud/apps/files/css/files.scss */
+.summary {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+  /* add whitespace to bottom of files list to correctly show dropdowns */
+  height: 300px;
+}
+/* line 665, /var/www/html/nextcloud/apps/files/css/files.scss */
+.summary:hover, .summary:focus, .summary, table tr.summary td {
+  background-color: transparent;
+}
+/* line 671, /var/www/html/nextcloud/apps/files/css/files.scss */
+.summary td {
+  border-bottom: none;
+  vertical-align: top;
+  padding-top: 20px;
+}
+/* line 676, /var/www/html/nextcloud/apps/files/css/files.scss */
+.summary .info {
+  margin-left: 40px;
+}
+/* line 679, /var/www/html/nextcloud/apps/files/css/files.scss */
+.has-favorites .summary .info {
+  margin-left: 90px;
+}
+/* line 683, /var/www/html/nextcloud/apps/files/css/files.scss */
+table.dragshadow {
+  width: auto;
+  z-index: 100;
+}
+/* line 687, /var/www/html/nextcloud/apps/files/css/files.scss */
+table.dragshadow td.filename {
+  padding-left: 60px;
+  padding-right: 16px;
+  height: 36px;
+}
+/* line 692, /var/www/html/nextcloud/apps/files/css/files.scss */
+table.dragshadow td.size {
+  padding-right: 8px;
+}
+/* line 695, /var/www/html/nextcloud/apps/files/css/files.scss */
+.mask {
+  z-index: 50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  background-repeat: no-repeat no-repeat;
+  background-position: 50%;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  transition: opacity 100ms;
+  -moz-transition: opacity 100ms;
+  -o-transition: opacity 100ms;
+  -ms-transition: opacity 100ms;
+  -webkit-transition: opacity 100ms;
+}
+/* line 713, /var/www/html/nextcloud/apps/files/css/files.scss */
+.mask.transparent {
+  opacity: 0;
+}
+/* line 717, /var/www/html/nextcloud/apps/files/css/files.scss */
+.newFileMenu {
+  font-weight: 300;
+  top: 100%;
+  margin-top: 4px;
+  min-width: 100px;
+  margin-left: 7px;
+  z-index: 1001;
+}
+/* line 726, /var/www/html/nextcloud/apps/files/css/files.scss */
+.newFileMenu .filenameform {
+  display: inline-block;
+}
+/* line 730, /var/www/html/nextcloud/apps/files/css/files.scss */
+.newFileMenu .filenameform input {
+  margin: 2px 0;
+}
+/* line 734, /var/www/html/nextcloud/apps/files/css/files.scss */
+#fileList .popovermenu .action {
+  color: #000;
+}
+/* line 738, /var/www/html/nextcloud/apps/files/css/files.scss */
+#filestable .filename .action .icon, #filestable .selectedActions a .icon, #controls .actions .button .icon {
+  display: inline-block;
+  vertical-align: middle;
+  background-size: 16px 16px;
+}
+/* line 746, /var/www/html/nextcloud/apps/files/css/files.scss */
+#filestable .filename .action .icon.hidden, #filestable .selectedActions a .icon.hidden, #controls .actions .button .icon.hidden {
+  display: none;
+}
+/* line 752, /var/www/html/nextcloud/apps/files/css/files.scss */
+#filestable .filename .action .icon.loading, #filestable .selectedActions a .icon.loading, #controls .actions .button .icon.loading {
+  width: 15px;
+  height: 15px;
+}
+/* line 759, /var/www/html/nextcloud/apps/files/css/files.scss */
+.app-files .actions .button.new {
+  position: relative;
+}
+/* line 762, /var/www/html/nextcloud/apps/files/css/files.scss */
+.app-files .actions .button.new .icon {
+  margin-bottom: 2px;
+}
+/* line 766, /var/www/html/nextcloud/apps/files/css/files.scss */
+.canDrop, #filestable tbody tr.canDrop {
+  background-color: rgba(255, 255, 140, 1);
+}
+/* line 772, /var/www/html/nextcloud/apps/files/css/files.scss */
+#quota {
+  margin: 0 !important;
+  border: none;
+  border-radius: 0;
+  position: fixed !important;
+  bottom: 44px;
+  width: inherit !important;
+  background-color: #fff;
+  border-right: 1px solid #eee;
+  z-index: 1;
+}
+/* line 783, /var/www/html/nextcloud/apps/files/css/files.scss */
+#quota .quota-container {
+  height: 5px;
+  border-radius: 3px;
+}
+/* line 787, /var/www/html/nextcloud/apps/files/css/files.scss */
+#quota .quota-container div {
+  height: 100%;
+  background-color: #0082c9;
+}
+/* increase the padding of the last item to not hide below the quota item */
+/* line 795, /var/www/html/nextcloud/apps/files/css/files.scss */
+.app-files #app-navigation > ul li:nth-last-child(1) {
+  margin-bottom: 44px;
+}
+/* line 799, /var/www/html/nextcloud/apps/files/css/files.scss */
+#quotatext {
+  padding: 0;
+  height: 30px;
+  line-height: 30px;
+}
+/* line 1, /var/www/html/nextcloud/apps/files/css/upload.scss */
+#upload {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 36px;
+  width: 39px;
+  padding: 0 !important;
+  /* override default control bar button padding */
+  margin-left: 3px;
+  overflow: hidden;
+  vertical-align: top;
+  position: relative;
+  z-index: -20;
+}
+/* line 14, /var/www/html/nextcloud/apps/files/css/upload.scss */
+#upload .icon-upload {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 44px;
+  width: 44px;
+  margin: -5px -3px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.65;
+}
+/* line 25, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.file_upload_target {
+  display: none;
+}
+/* line 26, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.file_upload_form {
+  display: inline;
+  float: left;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  overflow: visible;
+}
+/* line 28, /var/www/html/nextcloud/apps/files/css/upload.scss */
+#uploadprogresswrapper, #uploadprogresswrapper * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 34, /var/www/html/nextcloud/apps/files/css/upload.scss */
+#uploadprogresswrapper {
+  display: inline-block;
+  vertical-align: top;
+  height: 36px;
+  margin-left: 3px;
+}
+/* line 40, /var/www/html/nextcloud/apps/files/css/upload.scss */
+#uploadprogresswrapper > input[type='button'] {
+  height: 36px;
+  margin-left: 3px;
+}
+/* line 44, /var/www/html/nextcloud/apps/files/css/upload.scss */
+#uploadprogressbar {
+  position: relative;
+  float: left;
+  width: 200px;
+  height: 36px;
+  display: inline-block;
+  text-align: center;
+}
+/* line 52, /var/www/html/nextcloud/apps/files/css/upload.scss */
+#uploadprogressbar .ui-progressbar-value.ui-widget-header.ui-corner-left {
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  overflow: hidden;
+}
+/* line 59, /var/www/html/nextcloud/apps/files/css/upload.scss */
+#uploadprogressbar .label {
+  top: 6px;
+  opacity: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: normal;
+}
+/* line 66, /var/www/html/nextcloud/apps/files/css/upload.scss */
+#uploadprogressbar .label.inner {
+  color: white;
+  position: absolute;
+  display: block;
+  width: 200px;
+}
+/* line 72, /var/www/html/nextcloud/apps/files/css/upload.scss */
+#uploadprogressbar .label.outer {
+  position: relative;
+  color: black;
+}
+/* line 76, /var/www/html/nextcloud/apps/files/css/upload.scss */
+#uploadprogressbar .desktop {
+  display: block;
+}
+/* line 79, /var/www/html/nextcloud/apps/files/css/upload.scss */
+#uploadprogressbar .mobile {
+  display: none;
+}
+/* line 83, /var/www/html/nextcloud/apps/files/css/upload.scss */
+#uploadprogressbar + stop {
+  font-size: 13px;
+}
+/* line 87, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.oc-dialog .fileexists {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-bottom: 30px;
+}
+/* line 97, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.oc-dialog .fileexists .conflict .filename, .oc-dialog .fileexists .conflict .mtime, .oc-dialog .fileexists .conflict .size {
+  -webkit-touch-callout: initial;
+  -webkit-user-select: initial;
+  -khtml-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: initial;
+}
+/* line 107, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.oc-dialog .fileexists .conflict .message {
+  color: #e9322d;
+}
+/* line 110, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.oc-dialog .fileexists table {
+  width: 100%;
+}
+/* line 113, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.oc-dialog .fileexists th {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 117, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.oc-dialog .fileexists th input[type='checkbox'] {
+  margin-right: 3px;
+}
+/* line 120, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.oc-dialog .fileexists th:first-child {
+  width: 225px;
+}
+/* line 123, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.oc-dialog .fileexists th label {
+  font-weight: normal;
+  color: black;
+}
+/* line 127, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.oc-dialog .fileexists th .count {
+  margin-left: 3px;
+}
+/* line 130, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.oc-dialog .fileexists .conflicts .template {
+  display: none;
+}
+/* line 133, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.oc-dialog .fileexists .conflict {
+  width: 100%;
+  height: 85px;
+}
+/* line 137, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.oc-dialog .fileexists .conflict .filename {
+  color: #777;
+  word-break: break-all;
+  clear: left;
+}
+/* line 142, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.oc-dialog .fileexists .icon {
+  width: 64px;
+  height: 64px;
+  margin: 0px 5px 5px 5px;
+  background-repeat: no-repeat;
+  background-size: 64px 64px;
+  float: left;
+}
+/* line 151, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.oc-dialog .fileexists .original, .oc-dialog .fileexists .replacement {
+  float: left;
+  width: 225px;
+}
+/* line 156, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.oc-dialog .fileexists .conflicts {
+  overflow-y: auto;
+  max-height: 225px;
+}
+/* line 160, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.oc-dialog .fileexists .conflict input[type='checkbox'] {
+  float: left;
+}
+/* line 163, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.oc-dialog .fileexists #allfileslabel {
+  float: right;
+}
+/* line 166, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.oc-dialog .fileexists #allfiles {
+  vertical-align: bottom;
+  position: relative;
+  top: -3px;
+}
+/* line 171, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.oc-dialog .fileexists #allfiles + span {
+  vertical-align: bottom;
+}
+/* line 174, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.oc-dialog .oc-dialog-buttonrow {
+  width: 100%;
+  text-align: right;
+}
+/* line 178, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.oc-dialog .oc-dialog-buttonrow .cancel {
+  float: left;
+}
+/* line 182, /var/www/html/nextcloud/apps/files/css/upload.scss */
+.highlightUploaded {
+  -webkit-animation: highlightAnimation 2s 1;
+  -moz-animation: highlightAnimation 2s 1;
+  -o-animation: highlightAnimation 2s 1;
+  animation: highlightAnimation 2s 1;
+}
+@-webkit-keyframes highlightAnimation {
+  /* line 190, /var/www/html/nextcloud/apps/files/css/upload.scss */
+  0% {
+    background-color: rgba(255, 255, 140, 1);
+  }
+  /* line 191, /var/www/html/nextcloud/apps/files/css/upload.scss */
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+@-moz-keyframes highlightAnimation {
+  /* line 194, /var/www/html/nextcloud/apps/files/css/upload.scss */
+  0% {
+    background-color: rgba(255, 255, 140, 1);
+  }
+  /* line 195, /var/www/html/nextcloud/apps/files/css/upload.scss */
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+@-o-keyframes highlightAnimation {
+  /* line 198, /var/www/html/nextcloud/apps/files/css/upload.scss */
+  0% {
+    background-color: rgba(255, 255, 140, 1);
+  }
+  /* line 199, /var/www/html/nextcloud/apps/files/css/upload.scss */
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+@keyframes highlightAnimation {
+  /* line 202, /var/www/html/nextcloud/apps/files/css/upload.scss */
+  0% {
+    background-color: rgba(255, 255, 140, 1);
+  }
+  /* line 203, /var/www/html/nextcloud/apps/files/css/upload.scss */
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+/* 938 = table min-width(688) + app-navigation width: 250
+ 769 = size where app-navigation (768) is hidden +1
+ 688 = table min-width */
+@media only screen and (max-width: 938px) and (min-width: 769px), only screen and (max-width: 688px) {
+  /* don’t require a minimum width for files table */
+  /* hide size and date columns */
+  /* remove padding to let border bottom fill the whole width*/
+  /* and accordingly fix left margin of file list summary on mobile */
+  /* remove shift for multiselect bar to account for missing navigation */
+  /* restrict length of displayed filename to prevent overflow */
+  /* hide text of the share action on mobile */
+  /* ellipsis on file names */
+  /* proper notification area for multi line messages */
+  /* shorten elements for mobile */
+  /* hide desktop-only parts */
+  /* ensure that it is visible over #app-content */
+  /* line 6, /var/www/html/nextcloud/apps/files/css/mobile.scss */
+  .app-files #app-content.dir-drop {
+    background-color: rgba(255, 255, 255, 1) !important;
+  }
+  /* line 11, /var/www/html/nextcloud/apps/files/css/mobile.scss */
+  #body-user #filestable {
+    min-width: initial !important;
+  }
+  /* line 16, /var/www/html/nextcloud/apps/files/css/mobile.scss */
+  table th#headerSize, table td.filesize, table th#headerDate, table td.date {
+    display: none;
+  }
+  /* line 24, /var/www/html/nextcloud/apps/files/css/mobile.scss */
+  table td {
+    padding: 0;
+  }
+  /* line 28, /var/www/html/nextcloud/apps/files/css/mobile.scss */
+  .summary .info {
+    margin-left: 105px;
+  }
+  /* line 33, /var/www/html/nextcloud/apps/files/css/mobile.scss */
+  table.multiselect thead {
+    padding-left: 0;
+  }
+  /* line 38, /var/www/html/nextcloud/apps/files/css/mobile.scss */
+  table td.filename .nametext {
+    width: 100%;
+  }
+  /* line 42, /var/www/html/nextcloud/apps/files/css/mobile.scss */
+  #fileList a.action.action-menu img {
+    padding-left: 0;
+  }
+  /* line 46, /var/www/html/nextcloud/apps/files/css/mobile.scss */
+  #fileList .fileActionsMenu {
+    margin-right: 6px;
+  }
+  /* line 50, /var/www/html/nextcloud/apps/files/css/mobile.scss */
+  #fileList a.action-share span:not(.icon) {
+    display: none !important;
+  }
+  /* line 53, /var/www/html/nextcloud/apps/files/css/mobile.scss */
+  #fileList a.action.action-favorite {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)" !important;
+    opacity: 0.7 !important;
+  }
+  /* line 57, /var/www/html/nextcloud/apps/files/css/mobile.scss */
+  #fileList a.action.action-favorite {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)" !important;
+    opacity: 0.3 !important;
+  }
+  /* line 63, /var/www/html/nextcloud/apps/files/css/mobile.scss */
+  table td.filename .nametext .innernametext {
+    max-width: calc(100% - 175px) !important;
+  }
+  /* line 68, /var/www/html/nextcloud/apps/files/css/mobile.scss */
+  #notification-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+  /* line 77, /var/www/html/nextcloud/apps/files/css/mobile.scss */
+  #uploadprogressbar, #uploadprogressbar .label.inner {
+    width: 50px;
+  }
+  /* line 81, /var/www/html/nextcloud/apps/files/css/mobile.scss */
+  #uploadprogressbar .desktop {
+    display: none !important;
+  }
+  /* line 84, /var/www/html/nextcloud/apps/files/css/mobile.scss */
+  #uploadprogressbar .mobile {
+    display: block !important;
+  }
+  /* line 89, /var/www/html/nextcloud/apps/files/css/mobile.scss */
+  table.dragshadow {
+    z-index: 1000;
+  }
+}
+/* line 1, /var/www/html/nextcloud/apps/files/css/detailsView.scss */
+#app-sidebar .detailFileInfoContainer {
+  min-height: 50px;
+  padding: 15px;
+}
+/* line 6, /var/www/html/nextcloud/apps/files/css/detailsView.scss */
+#app-sidebar .detailFileInfoContainer > div {
+  clear: both;
+}
+/* line 10, /var/www/html/nextcloud/apps/files/css/detailsView.scss */
+#app-sidebar .mainFileInfoView {
+  margin-right: 20px;
+  /* accommodate for close icon */
+  float: left;
+  display: block;
+  width: 100%;
+}
+/* line 17, /var/www/html/nextcloud/apps/files/css/detailsView.scss */
+#app-sidebar .mainFileInfoView .icon {
+  display: inline-block;
+  background-size: 16px 16px;
+}
+/* line 22, /var/www/html/nextcloud/apps/files/css/detailsView.scss */
+#app-sidebar .mainFileInfoView .permalink {
+  padding: 6px 10px;
+  vertical-align: text-top;
+}
+/* line 26, /var/www/html/nextcloud/apps/files/css/detailsView.scss */
+#app-sidebar .mainFileInfoView .permalink-field > input {
+  clear: both;
+  width: 90%;
+}
+/* line 31, /var/www/html/nextcloud/apps/files/css/detailsView.scss */
+#app-sidebar .thumbnailContainer.large {
+  margin-left: -15px;
+  margin-right: -35px;
+  /* 15 + 20 for the close button */
+  margin-top: -15px;
+}
+/* line 37, /var/www/html/nextcloud/apps/files/css/detailsView.scss */
+#app-sidebar .thumbnailContainer.large.portrait {
+  margin: 0;
+  /* if we don't fit the image anyway we give it back the margin */
+}
+/* line 41, /var/www/html/nextcloud/apps/files/css/detailsView.scss */
+#app-sidebar .large .thumbnail {
+  width: 100%;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  float: none;
+  margin: 0;
+  height: auto;
+}
+/* line 52, /var/www/html/nextcloud/apps/files/css/detailsView.scss */
+#app-sidebar .large .thumbnail .stretcher {
+  content: '';
+  display: block;
+  padding-bottom: 56.25%;
+  /* sets height of .thumbnail to 9/16 of the width */
+}
+/* line 58, /var/www/html/nextcloud/apps/files/css/detailsView.scss */
+#app-sidebar .large.portrait .thumbnail {
+  background-position: 50% top;
+}
+/* line 62, /var/www/html/nextcloud/apps/files/css/detailsView.scss */
+#app-sidebar .large.portrait .thumbnail {
+  background-size: contain;
+}
+/* line 66, /var/www/html/nextcloud/apps/files/css/detailsView.scss */
+#app-sidebar .large.text {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-top: 15px;
+  font-size: 80%;
+  margin-left: 0;
+}
+/* line 74, /var/www/html/nextcloud/apps/files/css/detailsView.scss */
+#app-sidebar .thumbnail {
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+  background-size: 75px;
+}
+/* line 83, /var/www/html/nextcloud/apps/files/css/detailsView.scss */
+#app-sidebar .ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* line 89, /var/www/html/nextcloud/apps/files/css/detailsView.scss */
+#app-sidebar .fileName {
+  font-size: 16px;
+  padding-top: 13px;
+  padding-bottom: 3px;
+}
+/* line 95, /var/www/html/nextcloud/apps/files/css/detailsView.scss */
+#app-sidebar .fileName h3 {
+  width: calc(100% - 36px);
+  /* 36px is the with of the copy link icon */
+  display: inline-block;
+  padding: 5px 0;
+  margin: -5px 0;
+}
+/* line 102, /var/www/html/nextcloud/apps/files/css/detailsView.scss */
+#app-sidebar .file-details {
+  color: #999;
+}
+/* line 106, /var/www/html/nextcloud/apps/files/css/detailsView.scss */
+#app-sidebar .action-favorite {
+  vertical-align: sub;
+  padding: 10px;
+  margin: -10px;
+}
+/* line 112, /var/www/html/nextcloud/apps/files/css/detailsView.scss */
+#app-sidebar .action-favorite > span {
+  opacity: 0.7 !important;
+}
+/* line 116, /var/www/html/nextcloud/apps/files/css/detailsView.scss */
+#app-sidebar .detailList {
+  float: left;
+}
+/* line 120, /var/www/html/nextcloud/apps/files/css/detailsView.scss */
+#app-sidebar .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  opacity: 0.5;
+  z-index: 1;
+}

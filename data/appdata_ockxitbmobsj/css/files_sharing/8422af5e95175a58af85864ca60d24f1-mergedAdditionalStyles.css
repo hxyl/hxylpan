@@ -1,0 +1,193 @@
+/* line 1, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+.app-files .shareTabView {
+  min-height: 100px;
+}
+/* line 5, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+.shareTabView .oneline {
+  white-space: nowrap;
+  position: relative;
+}
+/* line 10, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+.shareTabView .shareWithLoading {
+  padding-left: 10px;
+  right: 35px;
+  top: 0px;
+}
+/* line 16, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+.shareTabView .shareWithRemoteInfo, .shareTabView .clipboardButton, .shareTabView .linkPass .icon-loading-small {
+  position: absolute;
+  right: -7px;
+  top: -4px;
+  padding: 14px;
+}
+/* line 25, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+.shareTabView .linkMore {
+  position: absolute;
+  right: -7px;
+  top: -4px;
+  padding: 14px;
+}
+/* fix the popup menu because the button is shifted and then the menu is not aligned */
+/* line 33, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+.shareTabView .popovermenu.socialSharingMenu {
+  right: -7px;
+}
+/* line 37, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+.shareTabView .popovermenu .clipboardButton {
+  position: relative;
+  top: initial;
+  right: initial;
+  padding: 18px 0 18px 36px;
+}
+/* fix clickable area because in the share tab popover the label is inside the actual menu item*/
+/* line 45, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+#shareWithList .popovermenu .shareOption {
+  padding-right: 0 !important;
+}
+/* fix clickable area because in the share tab popover the label is inside the actual menu item*/
+/* line 49, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+.shareTabView .popovermenu label {
+  width: 100%;
+  display: inline-block;
+  padding: 0 10px 0 0 !important;
+}
+/* line 55, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+.shareTabView label {
+  white-space: nowrap;
+}
+/* line 59, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+.shareTabView input[type="checkbox"] {
+  margin: 0 3px 0 8px;
+  vertical-align: middle;
+}
+/* line 64, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+.shareTabView input[type="text"].shareWithField, .shareTabView input[type="text"].emailField, .shareTabView input[type="text"].linkText, .shareTabView input[type="password"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 32px;
+  text-overflow: ellipsis;
+}
+/* line 74, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+.shareTabView form {
+  font-size: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+/* line 80, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+#shareWithList {
+  list-style-type: none;
+  padding: 0 0 16px;
+}
+/* line 85, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+#shareWithList > li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  white-space: normal;
+  display: inline-flex;
+  align-items: center;
+}
+/* line 93, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+#shareWithList .unshare img, #shareWithList .showCruds img {
+  vertical-align: text-bottom;
+  /* properly align icons */
+}
+/* line 97, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+#shareWithList .sharingOptionsGroup .icon-more {
+  padding: 7px;
+  vertical-align: middle;
+  opacity: 0.5;
+}
+/* line 103, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+#shareWithList .shareOption.menuitem > label:before {
+  /* Checkboxes positionning */
+  margin: 0 12px !important;
+}
+/* line 108, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+#shareWithList .unshare {
+  padding: 1px 6px;
+  vertical-align: text-bottom;
+}
+/* line 112, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+#shareWithList .unshare .icon {
+  vertical-align: text-top;
+}
+/* line 116, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+#shareWithList .sharingOptionsGroup .popovermenu:after {
+  right: 3px;
+}
+/* line 120, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+#shareWithList label input[type=checkbox] {
+  margin-left: 0;
+  position: relative;
+}
+/* line 124, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+#shareWithList .username {
+  padding-right: 8px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+}
+/* line 132, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+#shareWithList li .sharingOptionsGroup > .shareOption > label {
+  padding: 6px;
+  margin-right: 8px;
+  vertical-align: text-top;
+}
+/* line 138, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+.shareTabView .icon-loading-small {
+  display: inline-block;
+  z-index: 1;
+  margin-right: 4px;
+  vertical-align: text-top;
+}
+/* line 145, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+.shareTabView .shareWithList .icon-loading-small:not(.hidden) + span, .shareTabView .linkShareView .icon-loading-small:not(.hidden) + input + label:before {
+  /* Hide if loader is visible */
+  display: none !important;
+}
+/* line 151, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+.linkShareView {
+  margin-top: 16px;
+}
+/* line 155, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+.shareTabView .linkPass .icon-loading-small {
+  margin-right: 0px;
+}
+/* line 159, /var/www/html/nextcloud/apps/files_sharing/css/sharetabview.scss */
+.shareTabView .icon {
+  background-size: 16px 16px;
+}
+/**
+ * @copyright 2016 Christoph Wurst <christoph@winzerhof-wurst.at>
+ *
+ * @author 2016 Christoph Wurst <christoph@winzerhof-wurst.at>
+ *
+ * @license GNU AGPL version 3 or any later version
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+/* line 23, /var/www/html/nextcloud/apps/files_sharing/css/sharebreadcrumb.scss */
+div.crumb span.icon-shared, div.crumb span.icon-public {
+  display: inline-block;
+  cursor: pointer;
+  opacity: 0.2;
+  margin-right: 6px;
+}
+/* line 31, /var/www/html/nextcloud/apps/files_sharing/css/sharebreadcrumb.scss */
+div.crumb span.icon-shared.shared, div.crumb span.icon-public.shared {
+  opacity: 0.7;
+}

@@ -1,0 +1,1371 @@
+/**
+ * @copyright Copyright (c) 2016, John Molakvoæ <skjnldsv@protonmail.com>
+ * @copyright Copyright (c) 2016, Lukas Reschke <lukas@statuscode.ch>
+ * @copyright Copyright (c) 2016, Robin Appelman <robin@icewind.nl>
+ * @copyright Copyright (c) 2016, Julius Haertl <jus@bitgrid.net>
+ * @copyright Copyright (c) 2016, Joas Schilling <coding@schilljs.com>
+ * @copyright Copyright (c) 2016, Morris Jobke <hey@morrisjobke.de>
+ * @copyright Copyright (c) 2016, Christoph Wurst <christoph@winzerhof-wurst.at>
+ * @copyright Copyright (c) 2016, Raghu Nayyar <hey@raghunayyar.com>
+ * @copyright Copyright (c) 2011-2017, Jan-Christoph Borchardt <hey@jancborchardt.net>
+ *
+ * @license GNU AGPL version 3 or any later version
+ *
+ */
+/* line 16, /var/www/html/nextcloud/core/css/styles.scss */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  cursor: default;
+}
+/* line 28, /var/www/html/nextcloud/core/css/styles.scss */
+html, body {
+  height: 100%;
+}
+/* line 32, /var/www/html/nextcloud/core/css/styles.scss */
+article, aside, dialog, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+/* line 36, /var/www/html/nextcloud/core/css/styles.scss */
+body {
+  line-height: 1.5;
+}
+/* line 40, /var/www/html/nextcloud/core/css/styles.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  white-space: nowrap;
+}
+/* line 46, /var/www/html/nextcloud/core/css/styles.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+/* line 51, /var/www/html/nextcloud/core/css/styles.scss */
+table, td, th {
+  vertical-align: middle;
+}
+/* line 55, /var/www/html/nextcloud/core/css/styles.scss */
+a {
+  border: 0;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* line 60, /var/www/html/nextcloud/core/css/styles.scss */
+a * {
+  cursor: pointer;
+}
+/* line 65, /var/www/html/nextcloud/core/css/styles.scss */
+input {
+  cursor: pointer;
+}
+/* line 67, /var/www/html/nextcloud/core/css/styles.scss */
+input * {
+  cursor: pointer;
+}
+/* line 72, /var/www/html/nextcloud/core/css/styles.scss */
+select, .button span, label {
+  cursor: pointer;
+}
+/* line 76, /var/www/html/nextcloud/core/css/styles.scss */
+ul {
+  list-style: none;
+}
+/* line 80, /var/www/html/nextcloud/core/css/styles.scss */
+body {
+  background-color: #fff;
+  font-weight: 400;
+  font-size: 0.8em;
+  line-height: 1.6em;
+  font-family: 'Open Sans', Frutiger, Calibri, 'Myriad Pro', Myriad, sans-serif;
+  color: #000;
+  height: auto;
+}
+/* line 90, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login {
+  text-align: center;
+  background-color: #0082c9;
+  background-image: url('/nextcloud/core/css/../img/background.jpg?v=1');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 99, /var/www/html/nextcloud/core/css/styles.scss */
+.two-factor-header {
+  text-align: center;
+}
+/* line 103, /var/www/html/nextcloud/core/css/styles.scss */
+.two-factor-provider {
+  text-align: center;
+  width: 258px !important;
+  display: inline-block;
+  margin-bottom: 0 !important;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  border: none !important;
+}
+/* line 112, /var/www/html/nextcloud/core/css/styles.scss */
+.two-factor-link {
+  display: inline-block;
+  padding: 12px;
+  color: rgba(255, 255, 255, 0.75);
+}
+/* line 118, /var/www/html/nextcloud/core/css/styles.scss */
+.float-spinner {
+  height: 32px;
+  display: none;
+}
+/* line 123, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login .float-spinner {
+  margin-top: -32px;
+  padding-top: 32px;
+}
+/* line 128, /var/www/html/nextcloud/core/css/styles.scss */
+#nojavascript {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9000;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  line-height: 125%;
+  font-size: 24px;
+}
+/* line 140, /var/www/html/nextcloud/core/css/styles.scss */
+#nojavascript div {
+  display: block;
+  position: relative;
+  width: 50%;
+  top: 35%;
+  margin: 0px auto;
+}
+/* line 147, /var/www/html/nextcloud/core/css/styles.scss */
+#nojavascript a {
+  color: #fff;
+  border-bottom: 2px dotted #fff;
+}
+/* line 150, /var/www/html/nextcloud/core/css/styles.scss */
+#nojavascript a:hover, #nojavascript a:focus {
+  color: #dbdbdb;
+}
+/* SCROLLING */
+/* line 158, /var/www/html/nextcloud/core/css/styles.scss */
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* line 162, /var/www/html/nextcloud/core/css/styles.scss */
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+}
+/* line 166, /var/www/html/nextcloud/core/css/styles.scss */
+::-webkit-scrollbar-thumb {
+  background: #dbdbdb;
+  border-radius: 3px;
+}
+/* Searchbox */
+/* line 173, /var/www/html/nextcloud/core/css/styles.scss */
+.searchbox {
+  position: relative;
+}
+/* line 175, /var/www/html/nextcloud/core/css/styles.scss */
+.searchbox input[type='search'] {
+  position: relative;
+  font-size: 1.2em;
+  padding: 3px;
+  padding-left: 25px;
+  background: transparent url('/nextcloud/core/css/../img/actions/search-white.svg?v=1') no-repeat 6px center;
+  color: #fff;
+  border: 0;
+  border-radius: 3px;
+  margin-top: 3px;
+  width: 0;
+  cursor: pointer;
+  -webkit-transition: all 100ms;
+  transition: all 100ms;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
+  opacity: 0.6;
+}
+/* line 191, /var/www/html/nextcloud/core/css/styles.scss */
+.searchbox input[type='search']:focus, .searchbox input[type='search']:active, .searchbox input[type='search']:valid {
+  color: #fff;
+  width: 155px;
+  cursor: text;
+  background-color: #0082c9 !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+/* line 198, /var/www/html/nextcloud/core/css/styles.scss */
+.searchbox input[type='search']:hover, .searchbox input[type='search']:focus, .searchbox input[type='search']:active {
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
+  opacity: 1;
+}
+/* line 202, /var/www/html/nextcloud/core/css/styles.scss */
+.searchbox input[type='search'] ~ .icon-close-white {
+  display: inline;
+  position: absolute;
+  width: 15px;
+  height: 32px;
+  right: 3px;
+  top: 0;
+}
+/* line 209, /var/www/html/nextcloud/core/css/styles.scss */
+.searchbox input[type='search'] ~ .icon-close-white, .searchbox input[type='search'] ~ .icon-close-white:focus, .searchbox input[type='search'] ~ .icon-close-white:active, .searchbox input[type='search'] ~ .icon-close-white:hover {
+  border: none;
+  background-color: transparent;
+}
+/* line 214, /var/www/html/nextcloud/core/css/styles.scss */
+.searchbox input[type='search']:not(:valid) ~ .icon-close-white {
+  display: none;
+}
+/* line 217, /var/www/html/nextcloud/core/css/styles.scss */
+.searchbox input[type='search']::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+/* CONTENT ------------------------------------------------------------------ */
+/* line 225, /var/www/html/nextcloud/core/css/styles.scss */
+#controls {
+  box-sizing: border-box;
+  position: fixed;
+  top: 45px;
+  right: 0;
+  left: 0;
+  height: 44px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 50;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* position controls for apps with app-navigation */
+/* line 245, /var/www/html/nextcloud/core/css/styles.scss */
+#app-navigation + #app-content #controls {
+  left: 250px;
+}
+/* line 249, /var/www/html/nextcloud/core/css/styles.scss */
+.viewer-mode #app-navigation + #app-content #controls {
+  left: 0;
+}
+/* line 253, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 254, /var/www/html/nextcloud/core/css/styles.scss */
+#controls .button, #controls button {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 36px;
+  padding: 7px 10px;
+}
+/* line 260, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 261, /var/www/html/nextcloud/core/css/styles.scss */
+#controls input[type='submit'], #controls input[type='text'], #controls input[type='password'] {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 36px;
+  padding: 7px 10px;
+}
+/* line 268, /var/www/html/nextcloud/core/css/styles.scss */
+#controls select {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 36px;
+  padding: 7px 10px;
+}
+/* line 274, /var/www/html/nextcloud/core/css/styles.scss */
+#controls .button.hidden {
+  display: none;
+}
+/* line 279, /var/www/html/nextcloud/core/css/styles.scss */
+#content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+/* line 283, /var/www/html/nextcloud/core/css/styles.scss */
+#content .hascontrols {
+  margin-top: 45px;
+}
+/* line 288, /var/www/html/nextcloud/core/css/styles.scss */
+#content-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  /* prevent horizontal scrollbar */
+  padding-top: 45px;
+  box-sizing: border-box;
+}
+/* allow horizontal scrollbar for personal and admin settings */
+/* line 300, /var/www/html/nextcloud/core/css/styles.scss */
+#body-settings:not(.snapjs-left) .app-settings {
+  overflow-x: auto;
+}
+/* line 304, /var/www/html/nextcloud/core/css/styles.scss */
+#emptycontent, .emptycontent {
+  color: #878787;
+  text-align: center;
+  margin-top: 30vh;
+  width: 100%;
+}
+/* line 311, /var/www/html/nextcloud/core/css/styles.scss */
+#app-sidebar #emptycontent, #app-sidebar .emptycontent {
+  margin-top: 10vh;
+}
+/* line 315, /var/www/html/nextcloud/core/css/styles.scss */
+#emptycontent.emptycontent-search, .emptycontent.emptycontent-search {
+  position: static;
+}
+/* line 319, /var/www/html/nextcloud/core/css/styles.scss */
+#emptycontent h2, .emptycontent h2 {
+  margin-bottom: 10px;
+  line-height: 150%;
+}
+/* line 324, /var/www/html/nextcloud/core/css/styles.scss */
+#emptycontent [class^='icon-'], .emptycontent [class^='icon-'], #emptycontent [class*=' icon-'], .emptycontent [class*=' icon-'] {
+  background-size: 64px;
+  height: 64px;
+  width: 64px;
+  margin: 0 auto 15px;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=40)';
+  opacity: 0.4;
+}
+/* LOG IN & INSTALLATION ------------------------------------------------------------ */
+/* Some whitespace to the top */
+/* line 337, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login {
+  background-attachment: fixed;
+  /* fix background gradient */
+  height: 100%;
+  /* fix sticky footer */
+}
+/* line 338, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login #header {
+  padding-top: 100px;
+}
+/* line 345, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login p.info, #body-login form fieldset legend, #body-login #datadirContent label {
+  text-align: center;
+  color: #fff;
+}
+/* line 349, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 350, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login form fieldset .warning-info, #body-login form input[type='checkbox'] + label {
+  text-align: center;
+  color: #fff;
+}
+/* line 354, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 355, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login form .warning input[type='checkbox']:hover + label, #body-login form .warning input[type='checkbox']:focus + label, #body-login form .warning input[type='checkbox'] + label {
+  color: #fff !important;
+}
+/* line 360, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 361, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login .update h2 {
+  margin: 0 0 20px;
+}
+/* line 364, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login .update a {
+  color: #fff;
+  border-bottom: 1px solid #bababa;
+}
+/* line 369, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login .infogroup {
+  margin-bottom: 15px;
+}
+/* line 372, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login p#message img {
+  vertical-align: middle;
+  padding: 5px;
+}
+/* line 376, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login div.buttons {
+  text-align: center;
+}
+/* line 379, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login p.info {
+  margin: 0 auto;
+  padding-top: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 386, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login p.info a {
+  font-weight: 600;
+  padding: 13px;
+  margin: -13px;
+}
+/* line 392, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login form {
+  position: relative;
+  width: 280px;
+  margin: 16px auto;
+  padding: 0;
+}
+/* line 397, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login form fieldset {
+  margin-bottom: 20px;
+  text-align: left;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 405, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login form #sqliteInformation {
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+/* line 409, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login form #adminaccount {
+  margin-bottom: 15px;
+}
+/* line 412, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login form fieldset legend {
+  width: 100%;
+}
+/* Dark subtle label text */
+/* overrides another !important statement that sets this to unreadable black */
+/* line 422, /var/www/html/nextcloud/core/css/styles.scss */
+#datadirContent label {
+  width: 100%;
+}
+/* line 426, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 427, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login #datadirContent label {
+  display: block;
+  margin: 0;
+}
+/* line 431, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login form #datadirField legend {
+  margin-bottom: 15px;
+}
+/* line 434, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login #showAdvanced {
+  padding: 13px;
+  /* increase clickable area of Advanced dropdown */
+}
+/* line 437, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login #showAdvanced img {
+  vertical-align: bottom;
+  /* adjust position of Advanced dropdown arrow */
+  margin-left: -4px;
+}
+/* line 443, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login .icon-info-white {
+  padding: 10px;
+}
+/* line 446, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login .strengthify-wrapper {
+  display: inline-block;
+  position: relative;
+  left: 15px;
+  top: -23px;
+  width: 250px;
+}
+/* line 453, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 454, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login input[type='text'], #body-login input[type='password'], #body-login input[type='email'] {
+  border: none;
+  font-weight: 300;
+}
+/* strengthify wrapper */
+/* General new input field look */
+/* Nicely grouping input field sets */
+/* line 467, /var/www/html/nextcloud/core/css/styles.scss */
+.grouptop, .groupmiddle, .groupbottom {
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 475, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login .grouptop input, .grouptop input {
+  margin-bottom: 0 !important;
+  border-bottom: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+/* line 482, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login .groupmiddle input, .groupmiddle input {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1) inset !important;
+}
+/* line 491, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login .groupbottom input, .groupbottom input {
+  margin-top: 0 !important;
+  border-top: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1) inset !important;
+}
+/* line 499, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login .groupbottom input[type=submit] {
+  box-shadow: none !important;
+}
+/* keep the labels for screen readers but hide them since we use placeholders */
+/* line 505, /var/www/html/nextcloud/core/css/styles.scss */
+label.infield {
+  display: none;
+}
+/* line 509, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 510, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 511, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login form input[type='checkbox'] + label {
+  position: relative;
+  margin: 0;
+  padding: 14px;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 521, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login form .errors {
+  background: rgba(233, 50, 45, .35);
+  border: 1px solid #e9322d;
+  list-style-indent: inside;
+  margin: 0 0 2em;
+  padding: 1em;
+}
+/* line 529, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login .success {
+  background: rgba(70, 186, 97, .35);
+  border: 1px solid #46ba61;
+  width: 35%;
+  margin: 30px auto;
+  padding: 1em;
+  text-align: center;
+}
+/* line 537, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login #showAdvanced > img {
+  padding: 4px;
+  box-sizing: border-box;
+}
+/* line 541, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login p.info a, #body-login #showAdvanced {
+  color: #fff;
+}
+/* line 544, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 545, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login #remember_login:hover + label, #body-login #remember_login:focus + label {
+  opacity: 0.6;
+}
+/* line 549, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 550, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login #forgot-password:hover, #body-login #forgot-password:focus {
+  opacity: 0.6;
+}
+/* line 554, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 555, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login p.info a:hover, #body-login p.info a:focus {
+  opacity: 0.6;
+}
+/* Show password toggle */
+/* line 563, /var/www/html/nextcloud/core/css/styles.scss */
+#show, #dbpassword {
+  position: absolute;
+  right: 1em;
+  top: 0.8em;
+  float: right;
+}
+/* line 570, /var/www/html/nextcloud/core/css/styles.scss */
+#show, #dbpassword, #personal-show {
+  display: none;
+}
+/* line 574, /var/www/html/nextcloud/core/css/styles.scss */
+#show + label, #dbpassword + label {
+  right: 21px;
+  top: 15px !important;
+  margin: -14px !important;
+  padding: 14px !important;
+}
+/* line 581, /var/www/html/nextcloud/core/css/styles.scss */
+#show:checked + label, #dbpassword:checked + label, #personal-show:checked + label {
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)';
+  opacity: 0.8;
+}
+/* line 586, /var/www/html/nextcloud/core/css/styles.scss */
+#show + label, #dbpassword + label, #personal-show + label {
+  position: absolute !important;
+  height: 20px;
+  width: 24px;
+  background-image: url('/nextcloud/core/css/../img/actions/toggle.svg?v=1');
+  background-repeat: no-repeat;
+  background-position: center;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=30)';
+  opacity: 0.3;
+}
+/* line 597, /var/www/html/nextcloud/core/css/styles.scss */
+#show + label:before, #dbpassword + label:before, #personal-show + label:before {
+  display: none;
+}
+/* line 601, /var/www/html/nextcloud/core/css/styles.scss */
+#pass2, input[name='personal-password-clone'] {
+  padding-right: 30px;
+}
+/* line 605, /var/www/html/nextcloud/core/css/styles.scss */
+.personal-show-container {
+  position: relative;
+  display: inline-block;
+  margin-right: 6px;
+}
+/* line 610, /var/www/html/nextcloud/core/css/styles.scss */
+#personal-show + label {
+  display: block;
+  right: 0;
+  margin-top: -36px;
+  padding: 6px 4px;
+}
+/* Database selector */
+/* line 619, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 620, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login form #selectDbType {
+  text-align: center;
+  white-space: nowrap;
+  margin: 0;
+}
+/* line 624, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login form #selectDbType .info {
+  white-space: normal;
+}
+/* line 627, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login form #selectDbType label {
+  position: static;
+  margin: 0 -3px 5px;
+  font-size: 12px;
+  background: #f7f7f7;
+  color: #878787;
+  cursor: pointer;
+  border: 1px solid #dbdbdb;
+}
+/* line 635, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login form #selectDbType label span {
+  cursor: pointer;
+  padding: 10px 20px;
+}
+/* line 639, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login form #selectDbType label.ui-state-hover, #body-login form #selectDbType label.ui-state-active {
+  color: #000;
+  background-color: #ebebeb;
+}
+/* line 645, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login .warning, #body-login .update, #body-login .error {
+  display: block;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-align: left;
+  border-radius: 3px;
+  cursor: default;
+}
+/* line 654, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login .update {
+  width: inherit;
+  text-align: center;
+}
+/* line 657, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login .update .appList {
+  list-style: disc;
+  text-align: left;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+/* line 664, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login .v-align {
+  width: inherit;
+}
+/* line 667, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login .update img.float-spinner {
+  float: left;
+}
+/* Warnings and errors are the same */
+/* line 674, /var/www/html/nextcloud/core/css/styles.scss */
+#body-user .warning, #body-settings .warning {
+  margin-top: 8px;
+  padding: 5px;
+  background: rgba(233, 50, 45, .15);
+  border-radius: 3px;
+}
+/* line 681, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 682, /var/www/html/nextcloud/core/css/styles.scss */
+.warning legend, .warning a {
+  color: #fff !important;
+  font-weight: 600 !important;
+}
+/* line 688, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 689, /var/www/html/nextcloud/core/css/styles.scss */
+.error a {
+  color: #fff !important;
+  font-weight: 600 !important;
+}
+/* line 692, /var/www/html/nextcloud/core/css/styles.scss */
+.error a.button {
+  color: #545454 !important;
+  display: inline-block;
+  text-align: center;
+}
+/* line 698, /var/www/html/nextcloud/core/css/styles.scss */
+.error pre {
+  white-space: pre-wrap;
+  text-align: left;
+}
+/* line 704, /var/www/html/nextcloud/core/css/styles.scss */
+.error-wide {
+  width: 700px;
+  margin-left: -200px !important;
+}
+/* line 707, /var/www/html/nextcloud/core/css/styles.scss */
+.error-wide .button {
+  color: black !important;
+}
+/* line 712, /var/www/html/nextcloud/core/css/styles.scss */
+.warning-input {
+  border-color: #e9322d !important;
+}
+/* Fixes for log in page, TODO should be removed some time */
+/* line 718, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 719, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login ul.error-wide {
+  margin-top: 35px;
+}
+/* line 722, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login .warning {
+  margin: 0 7px 5px 4px;
+}
+/* line 724, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login .warning legend {
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
+  opacity: 1;
+}
+/* line 729, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login a.warning {
+  cursor: pointer;
+}
+/* line 732, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login .updateProgress .error {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* fixes for update page TODO should be fixed some time in a proper way */
+/* this is just for an error while updating the ownCloud instance */
+/* Alternative Logins */
+/* line 743, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 744, /var/www/html/nextcloud/core/css/styles.scss */
+#alternative-logins legend {
+  margin-bottom: 10px;
+}
+/* line 747, /var/www/html/nextcloud/core/css/styles.scss */
+#alternative-logins li {
+  height: 40px;
+  display: inline-block;
+  white-space: nowrap;
+}
+/* Log in and install button */
+/* line 756, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login input {
+  font-size: 20px;
+  margin: 5px;
+  padding: 10px 10px 8px;
+}
+/* line 760, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login input[type='text'], #body-login input[type='password'] {
+  width: calc(100% - 10px);
+  /* 5px margin */
+}
+/* line 763, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login input.login {
+  width: 269px;
+  background-position: right 16px center;
+}
+/* line 767, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login input[type='submit'] {
+  padding: 10px 20px;
+  /* larger log in and installation buttons */
+}
+/* line 773, /var/www/html/nextcloud/core/css/styles.scss */
+#remember_login {
+  margin: 18px 5px 0 16px !important;
+}
+/* line 777, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 778, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login .remember-login-container {
+  display: inline-block;
+  margin: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+/* line 784, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login #forgot-password {
+  padding: 11px;
+  float: right;
+  color: #fff;
+}
+/* line 789, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login .wrapper {
+  min-height: 100%;
+  margin: 0 auto -70px;
+  width: 300px;
+}
+/* line 794, /var/www/html/nextcloud/core/css/styles.scss */
+#body-login footer, #body-login .push {
+  height: 70px;
+}
+/* Sticky footer */
+/* round profile photos */
+/* line 803, /var/www/html/nextcloud/core/css/styles.scss */
+.avatar, .avatardiv {
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+/* line 806, /var/www/html/nextcloud/core/css/styles.scss */
+.avatar img, .avatardiv img {
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+/* line 812, /var/www/html/nextcloud/core/css/styles.scss */
+td.avatar {
+  border-radius: 0;
+}
+/* line 816, /var/www/html/nextcloud/core/css/styles.scss */
+#notification-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+/* line 823, /var/www/html/nextcloud/core/css/styles.scss */
+#notification {
+  margin: 0 auto;
+  max-width: 60%;
+  z-index: 8000;
+  background-color: #fff;
+  border: 0;
+  padding: 1px 8px;
+  display: none;
+  position: relative;
+  top: 0;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=90)';
+  opacity: 0.9;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 100px;
+}
+/* line 837, /var/www/html/nextcloud/core/css/styles.scss */
+#notification span {
+  cursor: pointer;
+  margin-left: 1em;
+}
+/* line 844, /var/www/html/nextcloud/core/css/styles.scss */
+#notification .row {
+  position: relative;
+}
+/* line 846, /var/www/html/nextcloud/core/css/styles.scss */
+#notification .row .close {
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 2px;
+}
+/* line 854, /var/www/html/nextcloud/core/css/styles.scss */
+#notification .row.closeable {
+  padding-right: 20px;
+}
+/* line 860, /var/www/html/nextcloud/core/css/styles.scss */
+tr .action:not(.permanent), .selectedActions a {
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+  opacity: 0;
+}
+/* line 865, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 866, /var/www/html/nextcloud/core/css/styles.scss */
+tr:hover .action, tr:focus .action, tr .action.permanent {
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=50)';
+  opacity: 0.5;
+}
+/* line 872, /var/www/html/nextcloud/core/css/styles.scss */
+.selectedActions a {
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=50)';
+  opacity: 0.5;
+}
+/* line 877, /var/www/html/nextcloud/core/css/styles.scss */
+tr .action {
+  width: 16px;
+  height: 16px;
+}
+/* line 882, /var/www/html/nextcloud/core/css/styles.scss */
+.header-action {
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)';
+  opacity: 0.8;
+}
+/* line 887, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 888, /var/www/html/nextcloud/core/css/styles.scss */
+tr:hover .action:hover, tr:focus .action:focus {
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
+  opacity: 1;
+}
+/* line 894, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 895, /var/www/html/nextcloud/core/css/styles.scss */
+.selectedActions a:hover, .selectedActions a:focus {
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
+  opacity: 1;
+}
+/* line 901, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 902, /var/www/html/nextcloud/core/css/styles.scss */
+.header-action:hover, .header-action:focus {
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
+  opacity: 1;
+}
+/* line 908, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 909, /var/www/html/nextcloud/core/css/styles.scss */
+tbody tr:hover, tbody tr:focus, tbody tr:active {
+  background-color: #f7f7f7;
+}
+/* line 914, /var/www/html/nextcloud/core/css/styles.scss */
+code {
+  font-family: 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', monospace;
+}
+/* line 918, /var/www/html/nextcloud/core/css/styles.scss */
+#quota {
+  cursor: default;
+  margin: 30px !important;
+  position: relative;
+  padding: 0 !important;
+}
+/* line 923, /var/www/html/nextcloud/core/css/styles.scss */
+#quota div {
+  padding: 0;
+  background-color: #e6e6e6;
+  font-weight: normal;
+  white-space: nowrap;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  min-width: 1%;
+  max-width: 100%;
+}
+/* line 935, /var/www/html/nextcloud/core/css/styles.scss */
+#quotatext {
+  padding: 0.6em 1em;
+}
+/* line 939, /var/www/html/nextcloud/core/css/styles.scss */
+#quota div.quota-warning {
+  background-color: #fc4;
+}
+/* line 943, /var/www/html/nextcloud/core/css/styles.scss */
+.pager {
+  list-style: none;
+  float: right;
+  display: inline;
+  margin: 0.7em 13em 0 0;
+}
+/* line 948, /var/www/html/nextcloud/core/css/styles.scss */
+.pager li {
+  display: inline-block;
+}
+/* line 953, /var/www/html/nextcloud/core/css/styles.scss */
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* line 958, /var/www/html/nextcloud/core/css/styles.scss */
+.ui-icon-circle-triangle-e {
+  background-image: url('/nextcloud/core/css/../img/actions/play-next.svg?v=1');
+}
+/* line 962, /var/www/html/nextcloud/core/css/styles.scss */
+.ui-icon-circle-triangle-w {
+  background-image: url('/nextcloud/core/css/../img/actions/play-previous.svg?v=1');
+}
+/* line 966, /var/www/html/nextcloud/core/css/styles.scss */
+.ui-datepicker-prev, .ui-datepicker-next {
+  border: #dbdbdb;
+  background: #fff;
+}
+/* ---- DIALOGS ---- */
+/* line 973, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 974, /var/www/html/nextcloud/core/css/styles.scss */
+#oc-dialog-filepicker-content .dirtree {
+  width: 92%;
+  float: left;
+  margin-left: 15px;
+  overflow: hidden;
+}
+/* line 979, /var/www/html/nextcloud/core/css/styles.scss */
+#oc-dialog-filepicker-content .dirtree div:first-child a {
+  background-image: url('/nextcloud/core/css/../img/places/home.svg?v=1');
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+/* line 984, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 985, /var/www/html/nextcloud/core/css/styles.scss */
+#oc-dialog-filepicker-content .dirtree span:not(:last-child) {
+  cursor: pointer;
+}
+/* line 988, /var/www/html/nextcloud/core/css/styles.scss */
+#oc-dialog-filepicker-content .dirtree span:last-child {
+  font-weight: bold;
+}
+/* line 991, /var/www/html/nextcloud/core/css/styles.scss */
+#oc-dialog-filepicker-content .dirtree span:not(:last-child)::after {
+  content: '>';
+  padding: 3px;
+}
+/* line 997, /var/www/html/nextcloud/core/css/styles.scss */
+#oc-dialog-filepicker-content .filelist-container {
+  box-sizing: border-box;
+  display: inline-block;
+  overflow-y: auto;
+  height: 100%;
+  /** overflow under the button row */
+  width: 100%;
+}
+/* line 1005, /var/www/html/nextcloud/core/css/styles.scss */
+#oc-dialog-filepicker-content .emptycontent {
+  color: #878787;
+  text-align: center;
+  margin-top: 80px;
+  width: 100%;
+  display: none;
+}
+/* line 1012, /var/www/html/nextcloud/core/css/styles.scss */
+#oc-dialog-filepicker-content .filelist {
+  background-color: white;
+  width: 100%;
+}
+/* line 1016, /var/www/html/nextcloud/core/css/styles.scss */
+#oc-dialog-filepicker-content #filestable.filelist {
+  /* prevent the filepicker to overflow */
+  min-width: initial;
+  margin-bottom: 50px;
+}
+/* line 1021, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 1022, /var/www/html/nextcloud/core/css/styles.scss */
+#oc-dialog-filepicker-content .filelist td {
+  padding: 14px;
+  border-bottom: 1px solid #ebebeb;
+}
+/* line 1026, /var/www/html/nextcloud/core/css/styles.scss */
+#oc-dialog-filepicker-content .filelist tr:last-child td {
+  border-bottom: none;
+}
+/* line 1029, /var/www/html/nextcloud/core/css/styles.scss */
+#oc-dialog-filepicker-content .filelist .filename {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-size: 32px;
+  background-repeat: no-repeat;
+  padding-left: 51px;
+  background-position: 7px 7px;
+  cursor: pointer;
+}
+/* line 1039, /var/www/html/nextcloud/core/css/styles.scss */
+#oc-dialog-filepicker-content .filelist .filesize, #oc-dialog-filepicker-content .filelist .date {
+  width: 80px;
+}
+/* line 1042, /var/www/html/nextcloud/core/css/styles.scss */
+#oc-dialog-filepicker-content .filelist .filesize {
+  text-align: right;
+}
+/* line 1046, /var/www/html/nextcloud/core/css/styles.scss */
+#oc-dialog-filepicker-content .filepicker_element_selected {
+  background-color: lightblue;
+}
+/* line 1051, /var/www/html/nextcloud/core/css/styles.scss */
+.ui-dialog {
+  position: fixed !important;
+}
+/* line 1055, /var/www/html/nextcloud/core/css/styles.scss */
+span.ui-icon {
+  float: left;
+  margin: 3px 7px 30px 0;
+}
+/* ---- CONTACTS MENU ---- */
+/* line 1062, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 1063, /var/www/html/nextcloud/core/css/styles.scss */
+#contactsmenu .menutoggle {
+  background-size: 16px 16px;
+  padding: 14px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+/* line 1071, /var/www/html/nextcloud/core/css/styles.scss */
+#contactsmenu > .menu {
+  /* show ~4.5 entries */
+  height: 278px;
+  width: 350px;
+  max-width: 90%;
+  right: 13px;
+}
+/* line 1078, /var/www/html/nextcloud/core/css/styles.scss */
+#contactsmenu > .menu::after {
+  right: 61px;
+}
+/* line 1082, /var/www/html/nextcloud/core/css/styles.scss */
+#contactsmenu > .menu .emptycontent {
+  margin-top: 5vh !important;
+  margin-bottom: 2vh;
+}
+/* line 1085, /var/www/html/nextcloud/core/css/styles.scss */
+#contactsmenu > .menu .emptycontent .icon-loading, #contactsmenu > .menu .emptycontent .icon-search {
+  display: inline-block;
+}
+/* line 1091, /var/www/html/nextcloud/core/css/styles.scss */
+#contactsmenu > .menu .content {
+  max-height: calc(100% - 50px);
+  height: 100%;
+  overflow-y: auto;
+}
+/* line 1096, /var/www/html/nextcloud/core/css/styles.scss */
+#contactsmenu > .menu .content .footer {
+  text-align: center;
+}
+/* line 1099, /var/www/html/nextcloud/core/css/styles.scss */
+#contactsmenu > .menu .content .footer a {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  opacity: 0.5;
+}
+/* line 1108, /var/www/html/nextcloud/core/css/styles.scss */
+#contactsmenu > .menu .contact {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 3px 3px 3px 10px;
+  border-bottom: 1px solid #eee;
+  /* actions menu */
+}
+/* line 1115, /var/www/html/nextcloud/core/css/styles.scss */
+#contactsmenu > .menu .contact :last-of-type {
+  border-bottom: none;
+}
+/* line 1119, /var/www/html/nextcloud/core/css/styles.scss */
+#contactsmenu > .menu .contact .avatar {
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+}
+/* line 1125, /var/www/html/nextcloud/core/css/styles.scss */
+#contactsmenu > .menu .contact .body {
+  flex-grow: 1;
+  padding-left: 8px;
+}
+/* line 1129, /var/www/html/nextcloud/core/css/styles.scss */
+#contactsmenu > .menu .contact .body div {
+  position: relative;
+  width: 100%;
+}
+/* line 1134, /var/www/html/nextcloud/core/css/styles.scss */
+#contactsmenu > .menu .contact .body .full-name, #contactsmenu > .menu .contact .body .last-message {
+  /* TODO: don't use fixed width */
+  max-width: 204px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* line 1141, /var/www/html/nextcloud/core/css/styles.scss */
+#contactsmenu > .menu .contact .body .last-message {
+  opacity: 0.5;
+}
+/* line 1146, /var/www/html/nextcloud/core/css/styles.scss */
+#contactsmenu > .menu .contact .top-action, #contactsmenu > .menu .contact .second-action, #contactsmenu > .menu .contact .other-actions {
+  width: 16px;
+  height: 16px;
+  padding: 14px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+/* line 1153, /var/www/html/nextcloud/core/css/styles.scss */
+#contactsmenu > .menu .contact .top-action :hover, #contactsmenu > .menu .contact .second-action :hover, #contactsmenu > .menu .contact .other-actions :hover {
+  opacity: 1;
+}
+/* line 1159, /var/www/html/nextcloud/core/css/styles.scss */
+#contactsmenu > .menu .contact .menu {
+  top: 47px;
+  margin-right: 13px;
+}
+/* line 1163, /var/www/html/nextcloud/core/css/styles.scss */
+#contactsmenu > .menu .contact .popovermenu::after {
+  right: 2px;
+}
+/* line 1170, /var/www/html/nextcloud/core/css/styles.scss */
+#contactsmenu-search {
+  width: calc(100% - 16px);
+  margin: 8px;
+}
+/* ---- TOOLTIPS ---- */
+/* line 1177, /var/www/html/nextcloud/core/css/styles.scss */
+.extra-data {
+  padding-right: 5px !important;
+}
+/* ---- TAGS ---- */
+/* line 1183, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 1184, /var/www/html/nextcloud/core/css/styles.scss */
+#tagsdialog .content {
+  width: 100%;
+  height: 280px;
+}
+/* line 1188, /var/www/html/nextcloud/core/css/styles.scss */
+#tagsdialog .scrollarea {
+  overflow: auto;
+  border: 1px solid #dbdbdb;
+  width: 100%;
+  height: 240px;
+}
+/* line 1194, /var/www/html/nextcloud/core/css/styles.scss */
+#tagsdialog .bottombuttons {
+  width: 100%;
+  height: 30px;
+}
+/* line 1197, /var/www/html/nextcloud/core/css/styles.scss */
+#tagsdialog .bottombuttons * {
+  float: left;
+}
+/* line 1201, /var/www/html/nextcloud/core/css/styles.scss */
+#tagsdialog .taglist li {
+  background: #f7f7f7;
+  padding: 0.3em 0.8em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms;
+}
+/* line 1209, /var/www/html/nextcloud/core/css/styles.scss */
+#tagsdialog .taglist li:hover, #tagsdialog .taglist li:active {
+  background: #ebebeb;
+}
+/* line 1213, /var/www/html/nextcloud/core/css/styles.scss */
+#tagsdialog .addinput {
+  width: 90%;
+  clear: both;
+}
+/* ---- BREADCRUMB ---- */
+/* line 1221, /var/www/html/nextcloud/core/css/styles.scss */
+div.crumb {
+  float: left;
+  display: block;
+  background-image: url('/nextcloud/core/css/../img/breadcrumb.svg?v=1');
+  background-repeat: no-repeat;
+  background-position: right center;
+  height: 44px;
+  background-size: auto 24px;
+}
+/* line 1229, /var/www/html/nextcloud/core/css/styles.scss */
+div.crumb.hidden {
+  display: none;
+}
+/* line 1232, /var/www/html/nextcloud/core/css/styles.scss */
+div.crumb a, div.crumb > span {
+  position: relative;
+  top: 12px;
+  padding: 14px 24px 14px 17px;
+  color: #545454;
+}
+/* line 1238, /var/www/html/nextcloud/core/css/styles.scss */
+div.crumb.last a {
+  padding-right: 0;
+}
+/* line 1241, /var/www/html/nextcloud/core/css/styles.scss */
+div.crumb:first-child a {
+  position: relative;
+  top: 13px;
+  padding-right: 14px;
+}
+/* line 1246, /var/www/html/nextcloud/core/css/styles.scss */
+div.crumb.last {
+  font-weight: 600;
+  margin-right: 10px;
+}
+/* line 1250, /var/www/html/nextcloud/core/css/styles.scss */
+div.crumb.ellipsized {
+  padding: 0 10px 0 5px;
+}
+/* line 1253, /var/www/html/nextcloud/core/css/styles.scss */
+div.crumb a.ellipsislink {
+  padding: 0 !important;
+  position: relative;
+  top: 8px !important;
+}
+/* line 1258, /var/www/html/nextcloud/core/css/styles.scss */
+div.crumb:hover, div.crumb:focus, div.crumb a:focus, div.crumb:active {
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
+  opacity: 0.7;
+}
+/* some feedback for hover/tap on breadcrumbs */
+/* line 1266, /var/www/html/nextcloud/core/css/styles.scss */
+.appear {
+  opacity: 1;
+  -webkit-transition: opacity 500ms ease 0s;
+  -moz-transition: opacity 500ms ease 0s;
+  -ms-transition: opacity 500ms ease 0s;
+  -o-transition: opacity 500ms ease 0s;
+  transition: opacity 500ms ease 0s;
+}
+/* line 1273, /var/www/html/nextcloud/core/css/styles.scss */
+.appear.transparent {
+  opacity: 0;
+}
+/* public footer */
+/* line 1280, /var/www/html/nextcloud/core/css/styles.scss */
+#body-public footer {
+  position: relative;
+  text-align: center;
+}
+/* line 1283, /var/www/html/nextcloud/core/css/styles.scss */
+#body-public footer .info {
+  color: #545454;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+/* line 1288, /var/www/html/nextcloud/core/css/styles.scss */
+#body-public footer .info a {
+  color: #545454;
+  font-weight: 600;
+  padding: 13px;
+  margin: -13px;
+}
+/* LEGACY FIX only - do not use fieldsets for settings */
+/* line 1299, /var/www/html/nextcloud/core/css/styles.scss */
+/* line 1300, /var/www/html/nextcloud/core/css/styles.scss */
+fieldset.warning legend, fieldset.update legend {
+  top: 18px;
+  position: relative;
+}
+/* line 1304, /var/www/html/nextcloud/core/css/styles.scss */
+fieldset.warning legend + p, fieldset.update legend + p {
+  margin-top: 12px;
+}
+/* for IE10 */
+@-ms-viewport {
+  width: device-width;
+}
+/* hidden input type=file field */
+/* line 1317, /var/www/html/nextcloud/core/css/styles.scss */
+.hiddenuploadfield {
+  display: none;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+}

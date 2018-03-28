@@ -1,0 +1,256 @@
+@font-face {
+  font-family: 'Droid Sans Mono';
+  src: url('/nextcloud/apps/files_texteditor/css/DroidSansMono-webfont.eot');
+  src: url('DroidSansMono-webfont.eot?#iefix') format('embedded-opentype'), url('/nextcloud/apps/files_texteditor/css/DroidSansMono-webfont.woff') format('woff'), url('/nextcloud/apps/files_texteditor/css/DroidSansMono-webfont.ttf') format('truetype'), url('DroidSansMono-webfont.svg#DroidSansMonoRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* override core style.css font-size:100% that messes up the editor in IE8 */
+/* line 1, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#editor_container div {
+  font-size: 13px !important;
+}
+/* line 6, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#editor_controls {
+  background-color: white;
+  height: 44px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 3000;
+  /* because the top navigation is 2000 */
+}
+/* line 15, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+.ace-clouds .ace_marker-layer .ace_active-line {
+  background-color: #f8f8f8 !important;
+}
+/* line 19, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#editor div.ace_gutter {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  opacity: 0.2;
+  background-color: transparent;
+}
+/* line 25, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#editor {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+/* line 32, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#editor_wrap {
+  box-sizing: border-box;
+  padding-top: 46px;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+/* line 42, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#editor_container {
+  position: fixed;
+  top: 6%;
+  left: 15%;
+  width: 70%;
+  height: 88%;
+  z-index: 9999;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+/* line 55, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#editor_container.hasPreview {
+  z-index: 1750;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: none;
+  border-radius: 0;
+}
+/* line 65, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#editor_container.hasPreview #preview, #editor_container.hasPreview #preview_wrap {
+  display: block;
+}
+/* line 69, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#editor_container.hasPreview #editor {
+  width: 50%;
+}
+/* line 73, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#editor_container.hasPreview #editor_controls {
+  top: 45px;
+}
+/* line 77, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#editor_container.hasPreview #editor_wrap {
+  padding-top: 91px;
+  /** main navigation + controls */
+}
+/* line 81, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#editor_overlay.hasPreview {
+  z-index: 1500;
+  /** below main navigation */
+}
+/* line 85, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#preview_wrap {
+  box-sizing: border-box;
+  height: 100%;
+  width: 50%;
+  right: 0;
+  position: absolute;
+  top: 0;
+  display: none;
+  padding-top: 91px;
+  /** main navigation + controls */
+}
+/* line 96, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#editor_container #preview {
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 15px;
+  display: none;
+  height: 100%;
+  width: 100%;
+  color: #252525;
+  background-color: #f9f9f9;
+}
+@media (max-width: 768px) {
+  /* line 108, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+  #editor_container {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
+    border-radius: 0;
+  }
+  /* line 117, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+  #editor_controls {
+    top: 45px;
+  }
+  /* line 121, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+  #editor_wrap {
+    padding-top: 91px;
+    /** main navigation + controls */
+  }
+  /* line 125, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+  #editor_container.hasPreview #preview {
+    display: none;
+  }
+  /* line 129, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+  #editor_container.hasPreview #editor {
+    width: 100%;
+  }
+}
+/* line 134, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#editor_close {
+  float: right;
+  width: 34px;
+  border: none;
+  background-color: transparent;
+  padding: 22px !important;
+  margin: 0 !important;
+  border-radius: 0;
+  right: 0;
+  opacity: 0.3;
+}
+/* line 146, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#editor_close:hover {
+  background-color: #ddd;
+}
+/* line 150, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#editorcontrols > button {
+  height: 30px !important;
+  margin-top: 7px;
+}
+/* line 155, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#editor_controls small.filename {
+  float: left;
+  color: #555;
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: bolder;
+  text-overflow: ellipsis;
+  padding: 12px 0 0 14px;
+  max-width: 218px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/* line 168, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#editor_controls small.saving-message {
+  color: #ccc;
+  font-family: inherit;
+  font-size: 90%;
+  padding: 13px 0 13px 17px;
+  overflow: hidden;
+  display: inline-block;
+  padding: 13px 0 0 17px;
+}
+/* line 178, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#editor_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 3001;
+  -moz-opacity: 0.7;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+/* line 191, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+small.unsaved-star {
+  position: absolute;
+  padding: 9px 0 0 4px;
+  display: inline-block;
+  float: left;
+}
+/* line 198, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#sidebar_editor .ace_gutter {
+  display: none;
+}
+/* line 202, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#sidebar_editor .ace_scrollbar.ace_scrollbar-h {
+  display: none;
+}
+/* line 206, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#preview_editor_controls {
+  float: right;
+}
+/* line 210, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#preview_editor_controls button {
+  height: 42px;
+  width: 42px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  margin: 0;
+  margin-top: 2px;
+  border-radius: 0;
+  border-left-width: 0;
+}
+/* line 222, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#preview_editor_controls button:hover, #preview_editor_controls button.active {
+  background-color: #eee;
+  border-left-width: 1px;
+}
+/* line 228, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#preview_editor_controls button:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-left-width: 1px;
+}
+/* line 234, /var/www/html/nextcloud/apps/files_texteditor/css/style.scss */
+#preview_editor_controls button:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+/* hide search function on mobile to prevent wrap of elements */
+@media only screen and (max-width: 768px) {
+  /* line 5, /var/www/html/nextcloud/apps/files_texteditor/css/mobile.scss */
+  #editorsearchval, #editor_save + label {
+    display: none !important;
+  }
+}

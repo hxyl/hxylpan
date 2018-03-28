@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/aws/aws-sdk-php" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/bantu/ini-get-wrapper" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/deepdiver1975/tarstreamer" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/doctrine/annotations" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/doctrine/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/doctrine/collections" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/doctrine/common" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/doctrine/dbal" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/guzzle/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/guzzlehttp/ringphp" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/guzzlehttp/streams" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/icewind/searchdav" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/icewind/streams" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/interfasys/lognormalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/jeremeamia/SuperClosure" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/leafo/scssphp" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/league/flysystem" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/lukasreschke/id3parser" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/mcnetic/zipstreamer" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/mikemccabe/json-patch-php" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/mtdowling/jmespath.php" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/natxet/CssMin" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/paragonie/random_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/patchwork/jsqueeze" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/patchwork/utf8" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/pear/archive_tar" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/pear/console_getopt" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/pear/pear-core-minimal" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/pear/pear_exception" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/phpseclib/phpseclib" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/pimple/pimple" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/punic/punic" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/rackspace/php-opencloud" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/react/promise" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/sabre/dav" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/sabre/event" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/sabre/http" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/sabre/uri" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/sabre/vobject" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/sabre/xml" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/stecman/symfony-console-completion" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/swiftmailer/swiftmailer" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/symfony/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/symfony/polyfill-php70" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/3rdparty/symfony/routing" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
